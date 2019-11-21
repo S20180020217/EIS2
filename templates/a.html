@@ -1,0 +1,71 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+   <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=displaywidth,initial-scale=1.0">
+        <meta name="author" content="venky">
+        <link  rel="stylesheet" href="{% static 'css/main.css' %}">
+        <style>                   
+            .login-page {
+            width: 360px;
+            padding: 0% 0 0;
+            margin: auto;
+            }
+            .form {
+            position: relative;
+            z-index: 1;
+            background: rgb(46, 180, 213);
+            max-width: 50%;
+            margin: 150px auto 150px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            }
+            .form input {
+            font-family: sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            }
+            .form .submit {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #4CAF50;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            cursor: pointer;
+            }
+            .form .submit:hover {
+            background:black;
+            }
+            .img
+            {
+                border-radius:50%;
+            }
+    
+        </style>
+</head>
+<body style="background-image: url(static/images/r5.jpg);max-height:100%;max-width:100%;background-attachment: fixed;background-size:cover;background-repeat:no-repeat;background-position: center center;text-align:center;">
+   <img src="static/images/rail.jpg" height="150px" width="150px" class="img">
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form" action="count/">
+                <input type="text" placeholder="username" name="userid" autofocus="autofocus"/>
+                <input type="password" placeholder="password" name="password"/>
+                <input class="submit" type="submit" value="Sign in"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
