@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <title>Table V02</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+  <link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+  <p style="text-align:center; background-color: rgb(11, 97, 168);color: rgb(255, 255, 255);font-size: 220%;" >Welcome To Indian Railways <br></p>
+  <p style="text-align:center; background-color: rgb(11, 97, 168);color: rgb(255, 255, 255);font-size:150%;">Detected damage coordinates</p>
+  <div class="limiter">
+    <div class="container-table100">
+      <div class="wrap-table100">
+          <div class="table">
+
+            <div class="row header">
+              <div class="cell">
+                Latitude
+              </div>
+              <div class="cell">
+                Longitude
+              </div>
+              <div class="cell">
+                Image1
+              </div>
+              <div class="cell">
+                Image2
+              </div>
+              <div class="cell">
+                Image3
+              </div> 
+              
+            </div>
+
+            {% for i in details %}
+            <div class="row">
+              <div class="cell" data-title="Latitude">
+                {{i.latitude}}
+              </div>
+              <div class="cell" data-title="Longitude">
+                {{i.longitude}}
+              </div>
+
+              <div class="cell" data-title="Image1">
+                <a href="/media/{{i.image1}}"> <img src="/media/{{i.image1}}" height="50" width="50"></a>
+              </div>
+              <div class="cell" data-title="Image2">
+                <a href="/media/{{i.image2}}"> <img src="/media/{{i.image2}}" height="50" width="50"></a>
+              </div>
+              <div class="cell" data-title="Image3">
+                <a href="/media/{{i.image3}}"> <img src="/media/{{i.image3}}" height="50" width="50"></a>
+              </div>
+              
+              
+            </div>
+            {% endfor %}
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+<!--===============================================================================================-->	
+  <script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+
+

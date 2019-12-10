@@ -18,9 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
 from . import views
+from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
 urlpatterns = [
     path('',views.home ),
-    path('count/',views.count),
-    path('about/',views.about),
-]
+    path('admin/',admin.site.urls),
+    path('submit/', views.submit),
+    path('signin/',views.signin),
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
