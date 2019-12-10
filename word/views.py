@@ -20,9 +20,9 @@ def submit(request):
 		j = Job()
 		j.latitude = request.POST["latitude"]
 		j.longitude = request.POST["longitude"]
-		j.image1=request.FILES["image1"]
-		j.image2=request.FILES["image2"]
-		j.image3=request.FILES["image3"]
+		j.image1 = request.POST["image1"]
+		j.image2 = request.POST["image2"]
+		j.image3 = request.POST["image3"]
 		j.save()
 		return HttpResponse("Successfully Submitted")
 	else:
